@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Restricted</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .message-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .message-container h2 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .message-container p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-redirect {
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-redirect:hover {
+            background-color: #0056b3;
+        }
+
+        .note {
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message-container">
+        <h2>Access Restricted</h2>
+        <p>It looks like you're trying to access a restricted page. Please log in to continue.</p>
+        <button class="btn-redirect" onclick="window.location.href='/index.html'">Go to Homepage</button>
+        <div class="note">
+            <p>Note: If you're already logged in, please ensure you have the necessary permissions to view this page.</p>
+        </div>
+    </div>
+</body>
+
+</html>

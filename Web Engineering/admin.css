@@ -1,0 +1,416 @@
+        /* General Body Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Sidebar Styling */
+        #sidebar-wrapper {
+            height: 100vh;
+            background-color: #343a40;
+            padding-top: 20px;
+            width: 250px;
+            /* Default width */
+            transition: width 0.3s ease;
+        }
+
+        .nav-link {
+            color: white;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        .nav-link:hover {
+            background-color: #007bff;
+        }
+
+        /* Responsive Sidebar */
+        @media screen and (max-width: 768px) {
+            #sidebar-wrapper {
+                width: 70%;
+                /* Adjust width for mobile devices */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #sidebar-wrapper {
+                width: 60%;
+                /* Further adjust for smaller screens */
+            }
+        }
+
+        /* Main Content Styling */
+        #page-content-wrapper {
+            padding: 20px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Admin Dropdown Cart Styling */
+        #admin-card {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 350px;
+            height: 50vh;
+            background-color: #f8f9fa;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+            overflow-y: auto;
+            margin-top: 10vh;
+        }
+
+        #admin-card.active {
+            right: 0;
+        }
+
+        #admin-card img {
+            width: 100px;
+            height: 100px;
+        }
+
+
+        /* General Chart Container */
+        .chart-container {
+            position: relative;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 800px;
+            /* Ensures responsiveness */
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Chart Titles */
+        .chart-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #495057;
+        }
+
+        /* Card Styling */
+        .card {
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        }
+
+        .card-title {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .card-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Alerts List */
+        .list-group-item {
+            border: none;
+            background: #f8f9fa;
+            color: #495057;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .chart-container {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .chart-container {
+                max-width: 100%;
+            }
+        }
+
+
+
+        /* user css */
+        /* Basic Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Table Styling */
+        .table {
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        .table thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        .table .btn {
+            margin: 0 5px;
+        }
+
+        /* Badge Styling */
+        .badge {
+            font-size: 12px;
+        }
+
+        /* Search and Filter Bar */
+        #user-search {
+            font-size: 14px;
+        }
+
+        #user-role-filter {
+            font-size: 14px;
+        }
+
+        .d-flex {
+            margin-bottom: 20px;
+        }
+
+        /* User Details Section */
+        .user-detail-section {
+            border: 1px solid #ddd;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .user-detail-section p {
+            font-size: 16px;
+        }
+
+        .user-detail-section button {
+            width: 100px;
+        }
+
+        /* User Table Badge Styles */
+        .table .badge-success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .table .badge-warning {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-dialog {
+            margin-top: 10%;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header .close {
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-body form .form-group {
+            margin-bottom: 15px;
+        }
+
+        .modal-body form input,
+        .modal-body form select {
+            width: 100%;
+        }
+
+        /* User Detail Section */
+        .user-detail-section {
+            display: none;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            margin-top: 20px;
+        }
+
+        .user-detail-section h4 {
+            margin-bottom: 20px;
+        }
+
+        .user-detail-section p {
+            font-size: 1rem;
+        }
+
+        .user-detail-section .btn-secondary {
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .table-responsive {
+                overflow-x: auto;
+            }
+
+            .user-detail-section {
+                max-width: 100%;
+            }
+        }
+
+
+        /* Settings Section */
+        #settings-content {
+            min-width: 100%;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        #settings-content.active {
+            display: block;
+        }
+
+        #settings-content h4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        /* admin card */
+        #admin-card {
+            position: absolute;
+            top: 80px; /* Adjust this to position it just below the "Admin Dashboard" link */
+            right: 0; /* Align the card to the right side */
+            width: 250px; /* Default width for larger screens */
+            max-width: 90%; /* Ensure it doesn't exceed the viewport width */
+            height: auto; /* Let the height adjust based on content */
+            max-height: 80vh; /* Keep the card within 80% of the viewport height */
+            display: none; /* Hidden by default */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: white; /* Background color for the card */
+            margin-top: -10px;
+            overflow-y: auto; /* Add scroll if content exceeds height */
+        }
+        
+        #admin-card .card-body {
+            padding: 15px;
+        }
+        
+        #admin-card .rounded-circle {
+            width: 80px; /* Adjust the size of the admin image */
+            height: 80px;
+        }
+        
+        #admin-card .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        #admin-card .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        #admin-card .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        #admin-card #close-admin-card {
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #888;
+        }
+        
+        #admin-card #close-admin-card:hover {
+            color: #000;
+        }
+        
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            #admin-card {
+                width: 70%; /* Reduce the width for tablet devices */
+                max-width: 350px; /* Prevent the card from being too wide */
+                right: 5%; /* Keep it aligned to the right */
+                left: auto; /* Ensure it's not centered */
+                height: auto; /* Let the height adjust naturally */
+                max-height: 70vh; /* Keep the height within the viewport */
+            }
+        
+            #admin-card .rounded-circle {
+                width: 60px; /* Slightly smaller admin image for tablet */
+                height: 60px;
+            }
+        
+            #admin-card .card-title {
+                font-size: 1.1rem; /* Adjust font size for better visibility */
+            }
+        
+            #admin-card .card-text {
+                font-size: 0.95rem; /* Slightly smaller text size */
+            }
+        }
+        
+
+        /* footer */
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #page-content-wrapper {
+            flex: 1;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }

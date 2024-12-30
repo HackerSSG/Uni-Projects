@@ -1,0 +1,1013 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0f0f15, #1c2b38); /* Adjusted gradient with deeper dark tones */
+}
+
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #0f0f15, #1f2b3b, #0e6a75); /* Matching gradient */
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease; /* Smooth transition for navbar effects */
+}
+
+.navbar:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6); /* Slightly stronger shadow on hover */
+}
+
+/* Navbar Brand */
+.navbar .navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00f5d4; /* Cyan color for brand */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(0, 245, 212, 0.8); /* Glow effect */
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+  color: #00b5a7; /* Darker cyan on hover */
+  text-shadow: 0 0 25px rgba(0, 245, 212, 1); /* Stronger glow on hover */
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  color: white;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: 30px; /* Round the edges of the nav-link */
+  transition: all 0.3s ease; /* Smooth transition */
+  position: relative;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #00f5d4; /* Cyan underline */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00f5d4; /* Cyan color on hover */
+  background-color: rgba(0, 245, 212, 0.2); /* Subtle background color on hover */
+  border: 2px solid #00f5d4; /* Cyan border on hover */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.6); /* Glow effect on hover */
+}
+
+.navbar-nav .nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Navbar Toggler Styling */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  background-color: #00f5d4; /* Cyan color for hamburger icon */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-color: #00b5a7; /* Darker cyan on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    margin-top: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.4rem;
+    padding: 12px 20px;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* Home Section */
+/* Home Section */
+#home {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1c2b38, #2f3b46); /* Slightly lighter background with blueish tones */
+}
+
+.slide-content {
+  height: 100vh; /* Full-screen height */
+  width: 100vw; /* Full-screen width */
+  background-size: cover; /* Ensure the image fills the container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  display: flex; /* Center content */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Text Overlay */
+.text-overlay {
+  color: white; /* White text for visibility */
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Text shadow for readability */
+}
+
+.text-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-overlay .btn {
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Make controls white */
+}
+
+@media (max-width: 768px) {
+  .text-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-overlay p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .text-overlay p {
+    font-size: 1rem;
+  }
+}
+
+
+/* About Us Section Styling */
+#about {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #1c2b38, #2f3b46);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+#h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* About Us Section Heading */
+#about .section-title {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Container Max Width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.sections-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00c6ff; /* Neon cyan */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Section Subtitle */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Card Styling */
+.team-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #00c6ff, #0057b8); /* Matching background color from services */
+  border: 2px solid #00c6ff;
+  color: #fff; /* Ensures text becomes white on hover */
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00c6ff;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.team-img:hover {
+  transform: scale(1.1);
+}
+
+.card-body h5 {
+  color: #00c6ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.card-body p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card h5 {
+    font-size: 1.4rem;
+  }
+
+  .team-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .team-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .team-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* Services Section Heading */
+#services h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00c6ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Section Subtitle */
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 4rem;
+}
+
+/* Card Styling */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2); /* Slightly higher opacity */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #00c6ff, #0057b8);
+  color: #fff;
+}
+
+.icon-size {
+  font-size: 3rem;
+  color: #ffdb58;
+}
+
+/* Flexbox for Equal Height Cards */
+.same-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Team Member Card */
+.team-card {
+  background: rgba(255, 255, 255, 0.1); /* Slightly more opacity */
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.1), rgba(0, 255, 255, 0.2)); /* Subtle gradient */
+  border: 2px solid #00c6ff;
+  color: #fff;
+}
+
+.team-card:hover .card-body p {
+  color: #fff; /* Make text white on hover */
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00c6ff;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.team-img:hover {
+  transform: scale(1.1);
+}
+
+.card-body h5 {
+  color: #00c6ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-body p {
+  color: #333; /* Default text color */
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.6; /* Make text more readable */
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+/* Add smooth background transition to the hover */
+.card-body p:hover {
+  opacity: 1;
+  color: #fff; /* White text when hovering */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-card {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .team-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-card h5 {
+    font-size: 1.4rem;
+  }
+
+  .team-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .team-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .team-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* contact us */
+/* Contact Us Section */
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1c2b38, #0d7377); /* Complementary gradient with deeper shades */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  color: white;
+}
+
+/* Contact Card Styling */
+.contact-card {
+  width: 90%;
+  max-width: 700px;
+  background: rgba(15, 15, 30, 0.8); /* Transparent dark card */
+  border: 2px solid #00f5d4; /* Bright teal border for a sleek contrast */
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 2.5rem); /* Reduced padding for smaller height */
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 245, 212, 0.4); /* Soft teal shadow */
+  backdrop-filter: blur(8px); /* Subtle background blur */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Contact Card */
+.contact-card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 20px 50px rgba(0, 245, 212, 0.6); /* Enhanced teal shadow */
+}
+
+/* Contact Us Title */
+h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem); /* Scalable title size */
+  color: #3faffa; /* Electric blue title for emphasis */
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px rgba(63, 175, 250, 0.8); /* Glowing blue effect */
+}
+
+/* Label Styles */
+#contactForm label {
+  display: block;
+  font-size: clamp(1rem, 1.5vw, 1.2rem); /* Responsive font size */
+  color: #00f5d4; /* Neon teal */
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Space between label and input */
+  text-align: left; /* Align label text */
+  text-shadow: 0 0 10px rgba(0, 245, 212, 0.6); /* Subtle glow effect */
+}
+
+/* Input and Textarea Styles */
+#contactForm .form-control {
+  border-radius: 12px;
+  border: 1px solid #444; /* Subtle dark border */
+  padding: clamp(10px, 2vw, 12px); /* Slightly smaller padding inside inputs */
+  margin-bottom: 1.5rem; /* Space between inputs */
+  font-size: 1rem;
+  background-color: #1f2833; /* Dark slate background for inputs */
+  color: #fff; /* White text */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus State for Input Fields */
+#contactForm .form-control:focus {
+  border-color: #3faffa; /* Electric blue border on focus */
+  background-color: #293241; /* Slightly brighter background on focus */
+  box-shadow: 0 0 15px rgba(63, 175, 250, 0.8); /* Glowing blue effect */
+  outline: none;
+}
+
+#contactForm .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Light white placeholder */
+}
+
+/* Button Styling */
+#contactForm .btn {
+  background: linear-gradient(135deg, #00f5d4, #3faffa); /* Gradient teal to blue */
+  border: none;
+  border-radius: 50px;
+  padding: 12px 25px; /* Slightly smaller button size */
+  font-size: 1.1rem; /* Adjusted font size */
+  color: #000; /* Black text for strong contrast */
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Button */
+#contactForm .btn:hover {
+  background: linear-gradient(135deg, #3faffa, #00f5d4); /* Reverse gradient */
+  box-shadow: 0 10px 30px rgba(0, 245, 212, 0.5); /* Glow */
+  transform: translateY(-5px); /* Button lift effect */
+}
+
+#contactForm .btn:focus {
+  outline: none;
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 2rem; /* Adjust padding for smaller screens */
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  #contactForm label {
+    font-size: 1rem; /* Reduce label font size on smaller screens */
+  }
+
+  #contactForm .form-control {
+    padding: 12px 15px; /* Adjust padding for inputs */
+  }
+
+  #contactForm .btn {
+    width: 100%; /* Full-width button */
+    padding: 12px 20px; /* Adjust button size */
+  }
+}
+
+/* For Very Small Screens */
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Further adjust title font size */
+  }
+
+  #contactForm label {
+    font-size: 0.9rem; /* Further reduce label font size */
+  }
+
+  #contactForm .form-control {
+    padding: 10px 12px;
+  }
+
+  #contactForm .btn {
+    padding: 10px 15px;
+  }
+}
+
+/* login form */
+/* Login Section Styles */
+#login {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f15, #2f3b46, #1c2b38); /* Dark gradient with cool blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  color: white;
+}
+
+/* Login Card Styling */
+.login-card {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(15, 15, 30, 0.8); /* Transparent dark card */
+  border: 2px solid #00f5d4;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 245, 212, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Login Switch Logos */
+.login-switch {
+  display: flex;
+  gap: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  border: 2px solid transparent;
+  padding: 10px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logo.active {
+  border-color: #00f5d4;
+  background: rgba(0, 245, 212, 0.1);
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.5);
+}
+
+/* Labels */
+#loginForm label {
+  display: block;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #00f5d4;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-shadow: 0 0 10px rgba(0, 245, 212, 0.6);
+}
+
+/* Input Fields */
+#loginForm .form-control {
+  border-radius: 12px;
+  border: 1px solid #444;
+  padding: clamp(10px, 2vw, 12px);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  background-color: #1f2833;
+  color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#loginForm .form-control:focus {
+  border-color: #3faffa;
+  background-color: #293241;
+  box-shadow: 0 0 15px rgba(63, 175, 250, 0.8);
+  outline: none;
+}
+
+#loginForm .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Signup Section */
+.signup-section {
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Button Styling */
+#loginForm .btn {
+  background: linear-gradient(135deg, #00f5d4, #3faffa);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#loginForm .btn:hover {
+  background: linear-gradient(135deg, #3faffa, #00f5d4);
+  box-shadow: 0 10px 30px rgba(0, 245, 212, 0.5);
+  transform: translateY(-5px);
+}
+/* login Section Link */
+#loginForm .signup-link {
+  color: #00f5d4;
+  text-decoration: none;
+}
+
+#loginForm .signup-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* singup form */
+
+/* Signup Section Styles */
+#signup {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0b0c10, #1f2833, #0d7377); /* Dark hacking-inspired gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  color: white;
+}
+
+/* Signup Card Styling */
+.signup-card {
+  width: 100%;
+  max-height: 100vh;
+  max-width: 600px;
+  background: rgba(15, 15, 30, 0.8); /* Transparent dark card */
+  border: 2px solid #00f5d4;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 245, 212, 0.4);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Labels */
+#signupForm label {
+  display: block;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #00f5d4;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  text-shadow: 0 0 10px rgba(0, 245, 212, 0.6);
+}
+
+/* Input Fields */
+#signupForm .form-control {
+  border-radius: 12px;
+  border: 1px solid #444;
+  padding: clamp(10px, 2vw, 12px);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  background-color: #1f2833;
+  color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#signupForm .form-control:focus {
+  border-color: #3faffa;
+  background-color: #293241;
+  box-shadow: 0 0 15px rgba(63, 175, 250, 0.8);
+  outline: none;
+}
+
+#signupForm .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button Styling */
+#signupForm .btn {
+  background: linear-gradient(135deg, #00f5d4, #3faffa);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#signupForm .btn:hover {
+  background: linear-gradient(135deg, #3faffa, #00f5d4);
+  box-shadow: 0 10px 30px rgba(0, 245, 212, 0.5);
+  transform: translateY(-5px);
+}
+
+/* Signup Section Link */
+#signupForm .login-link {
+  color: #00f5d4;
+  text-decoration: none;
+}
+
+#signupForm .login-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* Footer Styling */
+footer.footer {
+  background: linear-gradient(135deg, #0b0c10, #1f2833, #0d7377); /* Dark hacking-inspired gradient matching signup form */
+  color: white;
+  padding: 5rem 2rem;
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  color: #00f5d4; /* Same cyan as in signup form for heading */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(0, 245, 212, 0.6); /* Glow effect for headings */
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7); /* Slightly lighter text for better readability */
+  line-height: 1.6;
+}
+
+.footer-link {
+  display: block;
+  font-size: 1rem;
+  color: #fff; /* White color for links */
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #00f5d4; /* Cyan hover effect for links */
+  text-decoration: underline;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: #fff; /* White icons for visibility */
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #00f5d4; /* Cyan hover effect for social icons */
+}
+
+.footer-bottom {
+  background: #1f2833; /* Slightly darker background to maintain a cohesive look */
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7); /* Light gray text */
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  footer.footer {
+    padding: 3rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .footer-heading {
+    font-size: 1.3rem; /* Adjust heading font size for smaller screens */
+  }
+
+  .footer-text,
+  .footer-link {
+    font-size: 0.9rem; /* Adjust text and link size */
+  }
+
+  .social-icon {
+    font-size: 1.3rem; /* Adjust social icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 1.1rem; /* Further reduce heading font size */
+  }
+
+  .footer-text,
+  .footer-link {
+    font-size: 0.85rem; /* Further reduce text and link size */
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Adjust icon size for mobile */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
