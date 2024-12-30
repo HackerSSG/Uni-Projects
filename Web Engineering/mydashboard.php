@@ -384,7 +384,7 @@ $conn->close();
                     <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Tool 1">
                     <div class="card-body">
                         <h5 class="card-title">Subdomain Enumeration</h5>
-                        <p class="card-text">This tool performs subdomain enumeration operations on provided domain.</p>
+                        <p class="card-text">Does subdomain enumeration on provided domain.</p>
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-primary" onclick="window.location.href='/enumeration.php'">Use Tool</button>
                         </div>
@@ -397,9 +397,22 @@ $conn->close();
                     <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Tool 2">
                     <div class="card-body">
                         <h5 class="card-title">Crawling Tool</h5>
-                        <p class="card-text">This tool performs crawling operations on websites.</p>
+                        <p class="card-text">Performs crawling on provided domain.</p>
                         <div class="d-flex justify-content-center">
                             <button class="btn btn-primary" onclick="window.location.href='/crawling.php'">Use Tool</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Tool 3 -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card tool-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Tool 2">
+                    <div class="card-body">
+                        <h5 class="card-title">XSS Tool</h5>
+                        <p class="card-text">Find XSS in Matter of minutes</p>
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary" onclick="window.location.href='/xss.php'">Use Tool</button>
                         </div>
                     </div>
                 </div>
